@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title Coffee Roster
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Passion+One"
+  %body
+    .topbar{:'data-dropdown' => 'dropdown' }
+      .topbar-inner
+        .container-fluid
+          = link_to "Coffee Rooster", root_path
+    .container-fluid.main-content
+      = yield

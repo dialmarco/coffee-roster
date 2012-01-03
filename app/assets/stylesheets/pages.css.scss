@@ -1,0 +1,54 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+@mixin rounded-corner($radius: 7px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  background-color: #53777A;
+  color: white;
+}
+
+.header {
+  font-family: 'Passion One', cursive;
+  font-size: 80px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.turn {
+  @include rounded-corner(15px);
+  font-family: 'Passion One', cursive;
+  font-size: 80px;
+  margin-top: 100px;
+  padding-top: 50px;
+  margin-left: 250px;
+  margin-right: 250px;
+  text-align: center;
+  background-color: darken(#53777A, 10%);
+  color: #542437;
+  height: 100px;
+}
+
+.next {
+  clear: both;
+  float: right;
+  margin-top: 20px;
+}
+
+.last-run {
+  margin-top: 100px;
+  .header {
+    font-family: 'Passion One', cursive;
+    font-size: 30px;
+  }
+
+  .run {
+    margin-top: 10px;
+  }
+}

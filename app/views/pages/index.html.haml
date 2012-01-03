@@ -1,0 +1,12 @@
+.container-fluid
+  .sidebar
+    .last-run
+      .header= "Last Runs"
+      - @runs.each do |run|
+        .run
+          .run-name= run.name
+          .run-date= run.created_at.strftime "%a %d %b"
+  .content
+    .header= "Coffee Roster"
+    .row.turn= @next_runner
+    .row.next= link_to "Next >>", pages_coffee_run_path(:name => @next_runner), :method => :put, :class => 'btn large'
