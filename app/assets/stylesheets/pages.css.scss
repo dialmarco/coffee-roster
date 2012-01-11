@@ -30,7 +30,8 @@ body {
   margin-left: 250px;
   margin-right: 250px;
   text-align: center;
-  background-color: darken(#53777A, 10%);
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
   color: #542437;
   height: 100px;
 }
