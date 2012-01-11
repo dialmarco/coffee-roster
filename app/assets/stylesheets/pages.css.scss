@@ -9,6 +9,13 @@
   border-radius: $radius;
 }
 
+@mixin opacity($opacity) {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+    filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
+  }
+  opacity: $opacity;
+}
+
 body {
   background-image: url("/assets/green-fibers.png");
   color: white;
@@ -30,8 +37,7 @@ body {
   margin-left: 250px;
   margin-right: 250px;
   text-align: center;
-  opacity: 0.6;
-  filter: alpha(opacity=60); /* For IE8 and earlier */
+  @include opacity(0.5);
   color: #542437;
   height: 100px;
 }
