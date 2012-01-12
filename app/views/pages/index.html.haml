@@ -8,5 +8,6 @@
           .run-date= run.created_at.in_time_zone("Sydney").strftime "%a %d %b"
   .content
     .header= "Coffee Roster"
-    .row.turn= @next_runner
+    .row.turn
+      .turn-text= @next_runner
     .row.next= link_to "Next >>", pages_coffee_run_path(:name => @next_runner), :method => :put, :class => 'btn large'
